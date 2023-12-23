@@ -1,0 +1,25 @@
+h1 {
+    color: white;
+}
+body {
+font-family: Arial, Helvetica, sans-serif;
+background-color: rgb(2, 0, 42);
+}
+
+svg {
+border: 1px solid #ccc;
+width: 50%;
+height: 50%;
+transform: translate(50%);
+
+}
+
+.neonText {
+fill: #F7F3E7;
+text-shadow: 0px 0px 109.2px #F5CB6B, 0px 0px 31.2px #F5CB6B, 0px 0px 15.6px #F5CB6B;
+text-anchor: middle;
+font-family: sans-serif;
+cursor: pointer;
+}
+
+

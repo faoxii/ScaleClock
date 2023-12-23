@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+
+        h1 {
+            color: white;
+        }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+svg {
+    border: 1px solid #ccc;
+    width: 50%;
+    height: 50%;
+    transform: translate(50%);
+
+}
+
+.neonText {
+fill: #F7F3E7;
+text-shadow: 0px 0px 109.2px #F5CB6B, 0px 0px 31.2px #F5CB6B, 0px 0px 15.6px #F5CB6B;
+text-anchor: middle;
+font-family: sans-serif;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <h1>TEST SVGa :</h1>
+    <h1>{{modes.note_1}}</h1>
+    <div id="svg-container" class="center-container">
+    
+  
+        {% include "svg/"|add:modes.mode_name|add:".svg" %}
+
+    <h1>TEST</h1>
+
+</div>        
+
+</body>    
+    
+
+</html>
