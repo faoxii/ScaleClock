@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Google Sans Regular";
+}
+
+body {
+  background-color: #121420;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  background: #11101b;
+  display: flex;
+  align-items: center; /* Centre les elements au centre du header en y  */
+  justify-content: space-between; /* Met le logo a gauche et la navbar a droite*/
+  padding: 0 100px; /* Decale du bord les elements*/
+  border-bottom: 1px  solid #b6b6b6;
+}
+
+h1 {
+  color: white;
+}
+
+.header__logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fefefe;
+  text-shadow: 0px 0px 6.3px #4797FF, 0px 0px 12.6px #4797FF, 0px 0px 44.1px #4797FF, 0px 0px 88.2px #4797FF, 0px 0px 151.2px #4797FF, 0px 0px 264.6px #4797FF;
+
+}
+
+
+.hamburger {
+  display: none;
+}
+
+.nav-bar.active {  /* active la navbar */
+  height: 450px;
+
+}
+
+
+.nav-bar__items {
+  display: flex;
+}
+
+.nav-bar__item a {
+  display: block;
+  color: #fefefe;
+  font-size: 20px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin: 0 5px;
+}
+
+.nav-bar__item a:hover {
+  color: #11101b;
+  background: #fefefe;
+}
+
+.nav-bar__item a.active {
+  color: #11101b;
+  background: #fefefe;  /* mets l'élement en blanc qui est active */
+}
+
+@media only screen and (max-width: 1320px){
+  .header {
+      padding: 0 50px;
+  }
+  
+}
+
+@media only screen and (max-width: 1100px){
+  .header {
+      padding: 0 30px;
+  }
+  
+}
+@media only screen and (max-width: 900px){
+  .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+
+  .hamburger .line {
+      width: 30px;
+      height: 3px;
+      background: #fefefe;
+      margin: 6px 0;
+
+  }
+  
+  .nav-bar {
+      height:0px;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background: #11101b;
+      transition: 0.2s;
+      overflow: hidden; /* Cache les elements qui descende durant la transition */
+  }
+
+  .nav-bar__items {
+      display: block; /* Met les elements en colonne */
+      width: fit-content;  /* Enleve l'espace de trop sur les cote */
+      margin: 80px auto 0 auto;  
+      text-align: center; /* Centre les elements au centre de le contour */
+      transition: 0.5s;  /* transition  */
+      opacity: 0;   /* Cache les elements */
+  }
+
+  .nav-bar.active ul {
+      opacity: 1;
+  }
+
+  .nav-bar__item a {
+      margin-bottom: 12px;
+  }
+  
+}
+
+.main__svg {
+  width: 100%;
+
+}
+
+.main__svg__content {
+
+  width: 100%; /* Ajustez la largeur du SVG selon vos besoins */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Ajoutez des styles media queries pour ajuster le positionnement sur des écrans plus petits si nécessaire */
+@media (max-width: 768px) {
+  .main__svg {
+    padding: 0px; /* Ajoute un peu d'espace autour du SVG sur des écrans plus petits */
+  }
+  
+
+}
+
+.neonText{
+  fill: #F7F3E7;
+  text-shadow: 0px 0px 109.2px #F5CB6B, 0px 0px 31.2px #F5CB6B, 0px 0px 15.6px #F5CB6B;
+  text-anchor: middle;
+  font-family: sans-serif;
+  cursor: pointer;
+  }
+
+p {
+  color: white;
+
+}
+  
+  
+
+.main {
+  margin: 10%;
+  display: flex;
+
+  justify-content:space-between;
+}

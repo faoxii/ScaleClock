@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'scales.css' %}" />
+    <title>Scales</title>
+  </head>
+  <body>
+    <header>{% include "includes/header.html" %}</header>
+    <main>
+      <div class="main__modes">
+        <ul class="main__items">
+          <li class="main_item main__title"><h1>Major</h1></li>
+          <li class="main__item"><a href="{% url 'mode-general' mode_name="Ionian" %}">Ionian/Major</a></li>
+          <li class="main__item"><a href="{% url 'mode-general' mode_name="Dorian" %}">Dorian</a></li>
+          <li class="main__item"><a href="{% url 'mode-general' mode_name="Phrygian" %}">Phrygian</a></li>
+          <li class="main__item"><a href="{% url 'mode-general' mode_name="Lydian" %}">Lydian</a></li>
+          <li class="main__item"><a href="{% url 'mode-general' mode_name="Mixolydian" %}">Mixolydian</a></li>
+          <li class="main__item"><a href="{% url 'mode-general' mode_name="Aeolian" %}">Aeolian</a></li>
+          <li class="main__item"><a href="{% url 'mode-general' mode_name="Locrian" %}">Locrian</a></li>
+        </ul>
+        <ul class="main__items">
+          <li class="main_item main__title"><h1>Melodic Minor</h1></li>
+          <li class="main__item"><a class="" href="{% url 'mode-general' mode_name="Melodic Minor" %}">Melodic Minor</a></li>
+          <li class="main__item"><a href="{% url 'mode-general' mode_name="Dorian b2" %}">Dorian b2</a></li>
+          <li class="main__item"><a href="{% url 'mode-general' mode_name="Lydi" %}">Lydian Augmented</a></li>
+          <li class="main__item"><a href="{% url 'mode-general' mode_name="Lydian" %}">Lydian Dominant</a></li>
+          <li class="main__item"><a href="{% url 'mode-general' mode_name="Mixolydian" %}">Mixolydian b6</a></li>
+          <li class="main__item"><a href="{% url 'mode-general' mode_name="Aeolian" %}">Locrian #2</a></li>
+          <li class="main__item"><a href="{% url 'mode-general' mode_name="Locrian" %}">Altered</a></li>
+        </ul>
+        <ul class="main__items">
+          <li class="main_item main__title"><h1>Harmonic minor </h1></li>
+          <li class="main__item"><a href="{% url 'mode-general' mode_name="Ionian" %}">Harmonic Minor</a></li>
+          <li class="main__item"><a href="{% url 'mode-general' mode_name="Dorian" %}">Locrian #6</a></li>
+          <li class="main__item"><a href="{% url 'mode-general' mode_name="Phrygian" %}">Ionian #5</a></li>
+          <li class="main__item"><a href="{% url 'mode-general' mode_name="Lydian" %}">Dorian #4</a></li>
+          <li class="main__item"><a href="{% url 'mode-general' mode_name="Mixolydian" %}">Phrygian Dominant</a></li>
+          <li class="main__item"><a href="{% url 'mode-general' mode_name="Aeolian" %}">Lydian #2</a></li>
+          <li class="main__item"><a href="{% url 'mode-general' mode_name="Locrian" %}">Altered bb7</a></li>
+        </ul>
+      </div>
+    
+    
+    </main>
+  </body>
+</html>

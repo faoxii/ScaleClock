@@ -1,0 +1,36 @@
+.main__modes {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+  }
+  
+  .main__items {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main__title {
+    color: rgb(233,236,255);
+    text-align: center;
+    font-weight: 400;
+    font-family: "Google Sans Regular";
+  }
+  
+  .main__item {
+    text-align: center;
+    background-color: beige;
+    margin-top: 1rem;
+    padding: 0 40px;
+    border-radius: 8px;
+  }
+  
+  .main__item a {
+    color: rgb(98, 97, 97);
+    font-size: 2rem;
+  }
+  
+  .main__item span {
+      color:rgb(0, 255, 251);
+      font-size: 1rem;
+      vertical-align:middle;
+    }

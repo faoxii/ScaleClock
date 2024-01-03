@@ -8,10 +8,10 @@
 
     <text class="neonText" alignment-baseline="middle" font-size="50" x="780" y="305"></text>
     <text class="neonText" alignment-baseline="middle" font-size="50" x="880" y="420">{{modes.note_2}}</text>
-    <text class="neonText" alignment-baseline="middle" font-size="50" x="950" y="610"></text>
-    <text class="neonText" alignment-baseline="middle" font-size="50" x="875" y="825">{{modes.note_3}}</text>
-    <text class="neonText" alignment-baseline="middle" font-size="50" x="760" y="935"></text>
-    <text class="neonText" alignment-baseline="middle" font-size="50" x="572" y="980">{{modes.note_4}}</text>
+    <text class="neonText" alignment-baseline="middle" font-size="50" x="950" y="610">{{modes.note_3}}</text>
+    <text class="neonText" alignment-baseline="middle" font-size="50" x="875" y="825"></text>
+    <text class="neonText" alignment-baseline="middle" font-size="50" x="760" y="935">{{modes.note_4}}</text>
+    <text class="neonText" alignment-baseline="middle" font-size="50" x="572" y="980"></text>
     <text class="neonText" alignment-baseline="middle" font-size="50" x="375" y="935">{{modes.note_5}}</text>
     <text class="neonText" alignment-baseline="middle" font-size="50" x="250" y="820"></text>
     <text class="neonText"  alignment-baseline="middle" font-size="50" x="205" y="612">{{modes.note_6}}</text>
@@ -51,17 +51,17 @@
 <g filter="url(#filter8_ddddd_16_2)">
 <circle cx="839.982" cy="452.124" r="7" transform="rotate(60 839.982 452.124)" fill="white"/>
 </g>
-<!--
+
 <g filter="url(#filter9_ddd_16_2)">
 <path d="M638 607L869.156 606.499" stroke="#F7F3E7" stroke-width="5" stroke-linejoin="round"/>
 </g>
 <g filter="url(#filter10_ddd_16_2)">
 <circle cx="882.129" cy="608.237" r="12.5" transform="rotate(91 882.129 608.237)" stroke="#F7F3E7" stroke-width="3"/>
-</g>-->
+</g>
 <g filter="url(#filter11_ddddd_16_2)">
 <circle cx="882.129" cy="608.237" r="7" transform="rotate(91 882.129 608.237)" fill="white"/>
 </g>
-
+<!--
 <g filter="url(#filter12_ddd_16_2)">
 <path d="M629.653 640.592L830.091 755.736" stroke="#F7F3E7" stroke-width="5" stroke-linejoin="round"/>
 </g>
@@ -70,18 +70,18 @@
 </g>
 <g filter="url(#filter14_ddddd_16_2)">
 <circle cx="840.456" cy="763.728" r="7" transform="rotate(121 840.456 763.728)" fill="white"/>
-</g>
-<!--
+</g>-->
+
 <g filter="url(#filter15_ddd_16_2)">
 <path d="M605.6 664.253L721.612 864.189" stroke="#F7F3E7" stroke-width="5" stroke-linejoin="round"/>
 </g>
 <g filter="url(#filter16_ddd_16_2)">
 <circle cx="726.593" cy="876.294" r="12.5" transform="rotate(151 726.593 876.294)" stroke="#F7F3E7" stroke-width="3"/>
-</g>-->
+</g>
 <g filter="url(#filter17_ddddd_16_2)">
 <circle cx="726.593" cy="876.294" r="7" transform="rotate(151 726.593 876.294)" fill="white"/>
 </g>
-
+<!--
 <g filter="url(#filter18_ddd_16_2)">
 <path d="M570.578 674.2L572.693 905.347" stroke="#F7F3E7" stroke-width="5" stroke-linejoin="round"/>
 </g>
@@ -90,7 +90,7 @@
 </g>
 <g filter="url(#filter20_ddddd_16_2)">
 <circle cx="571.045" cy="918.332" r="7" transform="rotate(-179.4 571.045 918.332)" fill="white"/>
-</g>
+</g>-->
 
 <g filter="url(#filter21_ddd_16_2)">
 <path d="M541.918 665L423 863.222" stroke="#F7F3E7" stroke-width="5" stroke-linejoin="round"/>

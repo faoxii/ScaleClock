@@ -2,21 +2,21 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEST</title>
-    <link rel="stylesheet" href="{% static 'mode-page.css' %}">
-</head>
-<body>
-    <h1>Mode: {{ mode.mode_name }}</h1>
-    <p>Tonality: {{ mode.tonality }}</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TEST</title>
+        <link rel="stylesheet" href="{% static 'mode-page.css' %}">
+    </head>
+    <body>
+        <h1>Mode: {{ mode.mode_name }}</h1>
+        <p>Tonality: {{ mode.tonality }}</p>
 
-    
-    <h1>{{modes.note_1}}</h1>
-    <div id="svg-container" class="center-container">
-    
-        
-        {% include "svg/"|add:modes.mode_name|add:".svg" %}
-</body>
-</html>
+
+        <h1>{{modes.note_1}}</h1>
+        <div id="svg-container" class="center-container">
+
+
+            {% include "svg/"|add:modes.mode_name|add:".svg" %}
+        </body>
+    </html>

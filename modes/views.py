@@ -6,18 +6,27 @@ from django.http import Http404
 
 # Create your views here.
 
-def svg_text(request, mode_name, tonality):
-    mode = get_object_or_404(Mode, mode_name=mode_name, tonality=tonality)
-    return render(request, 'svg_test.html', {'modes': mode})
-
-
 def index_test(request):
-    mode = Mode.objects.all()
-    return render(request, 'index.html', {'modes': mode})
+    return render(request, 'header/index.html')
+    
+    
+def scales_page(request):
+    return render(request, 'header/scales.html')    
+
+def chords_page(request):
+    return render(request, 'header/chords.html')
+
+def lessons_page(request):
+    return render(request, 'header/lessons.html')
+
+def about_page(request):
+    return render(request, 'header/about.html')
+
+    
     
     
 def mode_general(request, mode_name):
-    template_path = f'modes/{mode_name.lower()}.html'
+    template_path = f'gammes/{mode_name.lower()}.html'
 
     try:
         get_template(template_path)
@@ -28,7 +37,7 @@ def mode_general(request, mode_name):
 
 def note_mode(request, mode_name, tonality):
     mode = get_object_or_404(Mode, mode_name=mode_name, tonality=tonality)
-    return render(request, 'test_mode.html', {'modes': mode})
+    return render(request, 'test.html', {'modes': mode})
 
         
         

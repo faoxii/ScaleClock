@@ -1,0 +1,175 @@
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  body {
+    background-color: #121420;
+  }
+
+  .header {
+    width: 100%;
+    height: 80px;
+    background: #11101b;
+    display: flex;
+    align-items: center; /* Centre les elements au centre du header en y  */
+    justify-content: space-between; /* Met le logo a gauche et la navbar a droite*/
+    padding: 0 100px; /* Decale du bord les elements*/
+    border-bottom: 1px solid #b6b6b6;
+    font-family: "Google Sans Regular";
+  }
+
+  a {
+    color: #fefefe;
+  }
+
+  h1 {
+    color: white;
+  }
+
+  .header__logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fefefe;
+    text-shadow: 0px 0px 6.3px #4797ff, 0px 0px 12.6px #4797ff,
+                 0px 0px 44.1px #4797ff, 0px 0px 88.2px #4797ff, 0px 0px 151.2px #4797ff,
+                 0px 0px 264.6px #4797ff;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .nav-bar.active {
+    /* active la navbar */
+    height: 450px;
+  }
+
+  .nav-bar__items {
+    display: flex;
+  }
+
+  .nav-bar__item a {
+    display: block;
+    color: #fefefe;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+  }
+
+  .nav-bar__item a:hover {
+    color: #11101b;
+    background: #fefefe;
+  }
+
+  .nav-bar__item a.active {
+    color: #11101b;
+    background: #fefefe; /* mets l'élement en blanc qui est active */
+  }
+
+  @media only screen and (max-width: 1320px) {
+    .header {
+      padding: 0 50px;
+    }
+  }
+
+  @media only screen and (max-width: 1100px) {
+    .header {
+      padding: 0 30px;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    .hamburger {
+      display: block;
+      cursor: pointer;
+    }
+
+    .hamburger .line {
+      width: 30px;
+      height: 3px;
+      background: #fefefe;
+      margin: 6px 0;
+    }
+
+    .nav-bar {
+      height: 0px;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background: #11101b;
+      transition: 0.2s;
+      overflow: hidden; /* Cache les elements qui descende durant la transition */
+    }
+
+    .nav-bar__items {
+      display: block; /* Met les elements en colonne */
+      width: fit-content; /* Enleve l'espace de trop sur les cote */
+      margin: 80px auto 0 auto;
+      text-align: center; /* Centre les elements au centre de le contour */
+      transition: 0.5s; /* transition  */
+      opacity: 0; /* Cache les elements */
+    }
+
+    .nav-bar.active ul {
+      opacity: 1;
+    }
+
+    .nav-bar__item a {
+      margin-bottom: 12px;
+    }
+  }
+</style>
+
+<header class="header">
+  <div class="header__logo">
+    <a href="{% url 'index' %}">Scale Clock</a>
+  </div>
+  <div class="hamburger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <nav class="nav-bar">
+    <ul class="nav-bar__items">
+      <li class="nav-bar__item">
+        <a href="{% url 'index' %}" class="active">Home</a>
+      </li>
+      <li class="nav-bar__item">
+        <a href="{% url 'scales' %}">Scales</a>
+      </li>
+      <li class="nav-bar__item">
+        <a href="{% url 'chords' %}">Chords</a>
+      </li>
+      <li class="nav-bar__item">
+        <a href="{% url 'lessons' %}">Lessons</a>
+      </li>
+      <li class="nav-bar__item">
+        <a href="{% url 'about' %}">About</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<script>
+  hamburger =
+    document.querySelector(
+      ".hamburger"
+    ); /* Cette ligne de code sélectionne le premier élément dans le document HTML qui a la classe CSS "hamburger" et le stocke dans la variable hamburger. */
+  hamburger.onclick = function () {
+    /* définit une fonction anonyme qui sera exécutée lorsque l'élément avec la classe "hamburger" est cliqué. */
+    navBar =
+      document.querySelector(
+        ".nav-bar"
+      ); /* sélectionne le premier élément dans le document HTML qui a la classe "nav-bar" */
+    navBar.classList.toggle(
+      "active"
+    ); /* ;Si la classe "active" est déjà présente, elle sera supprimée, et si elle est absente, elle sera ajoutée. Cela permet de basculer l'état de l'élément entre actif et inactif. */
+  };
+</script>
