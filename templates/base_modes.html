@@ -1,12 +1,40 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock title %}</title>
-    {% block css %}{% endblock css %}
+    <link rel="stylesheet" href="{% static 'modes_general.css' %}">
 </head>
 <body>
-    {% block content %}{% endblock content %}
+    {% include "includes/header.html" %}
+    {% block content %}
+    {% endblock content %}
+    <ul class="list__notes">
+        <div class=""></div>
+        <li class="list__notes__item"><a href="{% url "note-mode" mode_name=mode_name tonality='C' %}">C</a></li>
+        <li class="list__notes__item"><a href="{% url "note-mode" mode_name=mode_name tonality='C#' %}">C#</a></li>
+        <li class="list__notes__item"><a href="{% url "note-mode" mode_name=mode_name tonality='Db' %}">Db</a></li>
+        <li class="list__notes__item"><a href="{% url "note-mode" mode_name=mode_name tonality='D'%}">D</a></li>
+        <li class="list__notes__item"><a href="{% url "note-mode" mode_name=mode_name tonality='D#' %}">D#</a></li>
+        <li class="list__notes__item"><a href="{% url "note-mode" mode_name=mode_name tonality='Eb' %}">Eb</a></li>
+        <li class="list__notes__item"><a href="{% url "note-mode" mode_name=mode_name tonality='E'%}">E</a></li>
+        <li class="list__notes__item"><a href="{% url "note-mode" mode_name=mode_name tonality='F'%}">F</a></li>
+        <li class="list__notes__item"><a href="{% url "note-mode" mode_name=mode_name tonality='F#' %}">F#</a></li>
+        <li class="list__notes__item"><a href="{% url "note-mode" mode_name=mode_name tonality='Gb' %}">Gb</a></li>
+        <li class="list__notes__item"><a href="{% url "note-mode" mode_name=mode_name tonality='G'%}">G</a></li>
+        <li class="list__notes__item"><a href="{% url "note-mode" mode_name=mode_name tonality='G#' %}">G#</a></li>
+        <li class="list__notes__item"><a href="{% url "note-mode" mode_name=mode_name tonality='Ab' %}">Ab</a></li>
+        <li class="list__notes__item"><a href="{% url "note-mode" mode_name=mode_name tonality='A'%}">A</a></li>
+        <li class="list__notes__item"><a href="{% url "note-mode" mode_name=mode_name tonality='A#' %}">A#</a></li>
+        <li class="list__notes__item"><a href="{% url "note-mode" mode_name=mode_name tonality='Bb' %}">Bb</a></li>
+        <li class="list__notes__item"><a href="{% url "note-mode" mode_name=mode_name tonality='B"'%}">B</a></li>
+    </ul>   
+    <div class="svg">
+    {% include "svg/"|add:mode_name|add:".svg" %}
+    <p>GAIAIAIIAA GAIAIGAGIA GIAG AGIA GIAG IGA GAIG AGIA GIAG AIGA GIAG IAG AGIA GIAGIAGIAG AGIA</p>
+    
+    </div>
 </body>
 </html>

@@ -1,0 +1,32 @@
+.list__notes {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 3rem;
+    margin-top: 2rem;
+
+    
+}
+
+.list__notes__item {
+    background-color: rgb(244, 204, 151);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.list__notes__item a {
+    color: rgb(98, 97, 97);
+    font-size: 1.5rem;
+}
+
+
+.svg {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+svg {
+    
+    width: 50%; /* Ajustez la largeur du SVG selon vos besoins */
+    max-width: 100%;
+    max-height: 100%;
+  }

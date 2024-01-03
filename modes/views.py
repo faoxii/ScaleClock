@@ -25,7 +25,7 @@ def about_page(request):
     
     
     
-def mode_general(request, mode_name):
+""" def mode_general(request, mode_name):
     template_path = f'gammes/{mode_name.lower()}.html'
 
     try:
@@ -33,7 +33,11 @@ def mode_general(request, mode_name):
     except TemplateDoesNotExist :
         raise Http404("Mode not found")
 
-    return render(request, template_path)
+    return render(request, template_path) """
+    
+def mode_general(request, mode_name):
+    return render(request, 'modes_general.html' ,{'mode_name': mode_name})   
+    
 
 def note_mode(request, mode_name, tonality):
     mode = get_object_or_404(Mode, mode_name=mode_name, tonality=tonality)
